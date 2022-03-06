@@ -1,13 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
 import React from 'react';
 import {
   SafeAreaView,
@@ -18,6 +8,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import Config from 'react-native-config';
 
 import {
   Colors,
@@ -29,7 +20,7 @@ import {
 
 const Section: React.FC<{
   title: string;
-}> = ({children, title}) => {
+}> = ({title}) => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -49,7 +40,7 @@ const Section: React.FC<{
             color: isDarkMode ? Colors.light : Colors.dark,
           },
         ]}>
-        {children}
+        {Config.type}
       </Text>
     </View>
   );
