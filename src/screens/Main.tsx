@@ -15,6 +15,12 @@ const Main: React.FC<Props> = ({navigation}) => {
             navigation.navigate('DragNDrop');
           }}
         />
+        <Button
+          title="Moti"
+          onPress={() => {
+            navigation.navigate('Moti');
+          }}
+        />
       </View>
     </View>
   );
