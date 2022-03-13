@@ -27,6 +27,12 @@ const Main: React.FC<Props> = ({navigation}) => {
             navigation.navigate('FlatListSwipeAnimation');
           }}
         />
+        <Button
+          title="Products swipe"
+          onPress={() => {
+            navigation.navigate('SwipeProducts');
+          }}
+        />
       </View>
     </View>
   );
