@@ -8,6 +8,7 @@ import Animated, {
 import Product from './Product';
 import Pagination from './Pagination';
 import ProductTypeIndicator from './ProductTypeIndicator';
+import ProductCircle from './ProductCircles';
 
 interface IProduct {
   source: string;
@@ -67,6 +68,7 @@ const SwipeProductsScreen: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.root}>
+      <ProductCircle scrollX={scrollX} colors={data.map(item => item.color)} />
       <Animated.FlatList
         data={data}
         showsHorizontalScrollIndicator={false}
@@ -93,7 +95,7 @@ const SwipeProductsScreen: React.FC = () => {
           uri: 'https://raw.githubusercontent.com/catalinmiron/react-native-headphones-carousel/master/assets/ue_black_logo.png',
         }}
       />
-      <Pagination colors={data.map(item => item.color)} />
+      <Pagination scrollX={scrollX} colors={data.map(item => item.color)} />
       <ProductTypeIndicator
         strings={data.map(item => item.type)}
         overflowHeight={50}
